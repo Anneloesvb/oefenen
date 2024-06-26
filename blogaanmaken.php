@@ -3,7 +3,7 @@ $titel_van_blog = $_GET["blogtitel"]; // dit $titel_van_blog is een variabele di
 $inhoud_van_blog = $_GET["bloginhoud"];
 
 echo "hij doet het";
-echo $titel_van_blog; // hier haal ik de input van $titel_van_blog op 
+echo $titel_van_blog; // hier toon ik de input van $titel_van_blog op 
 echo $inhoud_van_blog;
 
 $mysqli = new mysqli("localhost","root","","anneloes");
