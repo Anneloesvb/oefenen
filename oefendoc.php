@@ -50,10 +50,7 @@ $sql = "SELECT * FROM dieren";
 $result = $mysqli -> query($sql); // t/m hier is de code die je nodig hebt om php te connecten met sql. Verander wel de database naam, de table naam etc. (in dit geval: root / anneloes en dieren)
 while($row = $result -> fetch_assoc()){ 
   echo '<div class="blok"><h1 class="naam">HET DIER: de ' .($row["Naam"]) .':</h1>';
-                              // <h1 class="naam">Leeuw</h1>
   echo '<img src="afbeeldingen/'.($row["Afbeelding"]) .'" width="100%">';
-
-  
   echo '<p class="Info">' .($row["Info"]) .'</p>';
   echo '<p class="Woonplaats">' .($row["Woonplaats"]) .'</p>';
   echo '<button class="knop">LEES MEER</button></div>';
