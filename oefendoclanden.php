@@ -1,5 +1,12 @@
 <link rel="stylesheet" type="text/css" href="oefenstyle.css" />
+<script>
 
+  function Klik(parameter){
+    alert("Hoi"); 
+    window.open("landendetails.php?id="+parameter, "_self"); //_self betekend op de pagina zelf openen
+  }
+
+    </script>
 <?php
 
 $mysqli = new mysqli("localhost","root","","anneloes");
@@ -12,9 +19,13 @@ while($row = $result -> fetch_assoc()){
 
   echo '<p class="info">' .($row["Informatie"]) .'</p>';
   echo '<h4 class-"Inwoners">' .($row["Aantal inwoners"]) .'</h4>';
-  echo '<button class="buttonland">LEES MEER</button>'; 
+  echo '<button onclick="Klik('.$row["ID"].')" class="buttonland">LEES MEER</button>' ; 
+  echo "\n";
   echo '<hr>';
 }
+
+
+
 
 ?>
 
